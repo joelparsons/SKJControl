@@ -24,6 +24,7 @@
 		5DB8408518CE5EC200BA1EEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB8405D18CE5EC200BA1EEF /* UIKit.framework */; };
 		5DB8408D18CE5EC200BA1EEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DB8408B18CE5EC200BA1EEF /* InfoPlist.strings */; };
 		5DB8408F18CE5EC200BA1EEF /* SKJControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8408E18CE5EC200BA1EEF /* SKJControlTests.m */; };
+		5DB840C418CE66C300BA1EEF /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB840BE18CE66C300BA1EEF /* libExpecta-ios-universal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,48 @@
 		5DB8408A18CE5EC200BA1EEF /* SKJControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKJControlTests-Info.plist"; sourceTree = "<group>"; };
 		5DB8408C18CE5EC200BA1EEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5DB8408E18CE5EC200BA1EEF /* SKJControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKJControlTests.m; sourceTree = "<group>"; };
+		5DB8409A18CE66C300BA1EEF /* EXPBackwardCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBackwardCompatibility.h; sourceTree = "<group>"; };
+		5DB8409B18CE66C300BA1EEF /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
+		5DB8409C18CE66C300BA1EEF /* EXPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPDefines.h; sourceTree = "<group>"; };
+		5DB8409D18CE66C300BA1EEF /* EXPDoubleTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPDoubleTuple.h; sourceTree = "<group>"; };
+		5DB8409E18CE66C300BA1EEF /* Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expecta.h; sourceTree = "<group>"; };
+		5DB8409F18CE66C300BA1EEF /* ExpectaSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpectaSupport.h; sourceTree = "<group>"; };
+		5DB840A018CE66C300BA1EEF /* EXPExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPExpect.h; sourceTree = "<group>"; };
+		5DB840A118CE66C300BA1EEF /* EXPFloatTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPFloatTuple.h; sourceTree = "<group>"; };
+		5DB840A218CE66C300BA1EEF /* EXPMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatcher.h; sourceTree = "<group>"; };
+		5DB840A318CE66C300BA1EEF /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatcherHelpers.h; sourceTree = "<group>"; };
+		5DB840A418CE66C300BA1EEF /* EXPMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatchers.h; sourceTree = "<group>"; };
+		5DB840A518CE66C300BA1EEF /* EXPMatchers+beCloseTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beCloseTo.h"; sourceTree = "<group>"; };
+		5DB840A618CE66C300BA1EEF /* EXPMatchers+beFalsy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beFalsy.h"; sourceTree = "<group>"; };
+		5DB840A718CE66C300BA1EEF /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
+		5DB840A818CE66C300BA1EEF /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
+		5DB840A918CE66C300BA1EEF /* EXPMatchers+beGreaterThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beGreaterThanOrEqualTo.h"; sourceTree = "<group>"; };
+		5DB840AA18CE66C300BA1EEF /* EXPMatchers+beIdenticalTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beIdenticalTo.h"; sourceTree = "<group>"; };
+		5DB840AB18CE66C300BA1EEF /* EXPMatchers+beInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beInstanceOf.h"; sourceTree = "<group>"; };
+		5DB840AC18CE66C300BA1EEF /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beInTheRangeOf.h"; sourceTree = "<group>"; };
+		5DB840AD18CE66C300BA1EEF /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
+		5DB840AE18CE66C300BA1EEF /* EXPMatchers+beLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beLessThan.h"; sourceTree = "<group>"; };
+		5DB840AF18CE66C300BA1EEF /* EXPMatchers+beLessThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beLessThanOrEqualTo.h"; sourceTree = "<group>"; };
+		5DB840B018CE66C300BA1EEF /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beNil.h"; sourceTree = "<group>"; };
+		5DB840B118CE66C300BA1EEF /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beSubclassOf.h"; sourceTree = "<group>"; };
+		5DB840B218CE66C300BA1EEF /* EXPMatchers+beSupersetOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beSupersetOf.h"; sourceTree = "<group>"; };
+		5DB840B318CE66C300BA1EEF /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
+		5DB840B418CE66C300BA1EEF /* EXPMatchers+conformTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+conformTo.h"; sourceTree = "<group>"; };
+		5DB840B518CE66C300BA1EEF /* EXPMatchers+contain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+contain.h"; sourceTree = "<group>"; };
+		5DB840B618CE66C300BA1EEF /* EXPMatchers+endWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+endWith.h"; sourceTree = "<group>"; };
+		5DB840B718CE66C300BA1EEF /* EXPMatchers+equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+equal.h"; sourceTree = "<group>"; };
+		5DB840B818CE66C300BA1EEF /* EXPMatchers+haveCountOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+haveCountOf.h"; sourceTree = "<group>"; };
+		5DB840B918CE66C300BA1EEF /* EXPMatchers+notify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+notify.h"; sourceTree = "<group>"; };
+		5DB840BA18CE66C300BA1EEF /* EXPMatchers+raise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+raise.h"; sourceTree = "<group>"; };
+		5DB840BB18CE66C300BA1EEF /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+raiseWithReason.h"; sourceTree = "<group>"; };
+		5DB840BC18CE66C300BA1EEF /* EXPMatchers+respondTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+respondTo.h"; sourceTree = "<group>"; };
+		5DB840BD18CE66C300BA1EEF /* EXPUnsupportedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPUnsupportedObject.h; sourceTree = "<group>"; };
+		5DB840BE18CE66C300BA1EEF /* libExpecta-ios-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libExpecta-ios-universal.a"; sourceTree = "<group>"; };
+		5DB840BF18CE66C300BA1EEF /* libExpecta-macosx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libExpecta-macosx.a"; sourceTree = "<group>"; };
+		5DB840C018CE66C300BA1EEF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5DB840C118CE66C300BA1EEF /* NSObject+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Expecta.h"; sourceTree = "<group>"; };
+		5DB840C218CE66C300BA1EEF /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Expecta.h"; sourceTree = "<group>"; };
+		5DB840C318CE66C300BA1EEF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB840C418CE66C300BA1EEF /* libExpecta-ios-universal.a in Frameworks */,
 				5DB8408318CE5EC200BA1EEF /* XCTest.framework in Frameworks */,
 				5DB8408518CE5EC200BA1EEF /* UIKit.framework in Frameworks */,
 				5DB8408418CE5EC200BA1EEF /* Foundation.framework in Frameworks */,
@@ -158,10 +202,60 @@
 		5DB8408918CE5EC200BA1EEF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DB8409918CE66A900BA1EEF /* Specta */,
 				5DB8408A18CE5EC200BA1EEF /* SKJControlTests-Info.plist */,
 				5DB8408B18CE5EC200BA1EEF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DB8409918CE66A900BA1EEF /* Specta */ = {
+			isa = PBXGroup;
+			children = (
+				5DB8409A18CE66C300BA1EEF /* EXPBackwardCompatibility.h */,
+				5DB8409B18CE66C300BA1EEF /* EXPBlockDefinedMatcher.h */,
+				5DB8409C18CE66C300BA1EEF /* EXPDefines.h */,
+				5DB8409D18CE66C300BA1EEF /* EXPDoubleTuple.h */,
+				5DB8409E18CE66C300BA1EEF /* Expecta.h */,
+				5DB8409F18CE66C300BA1EEF /* ExpectaSupport.h */,
+				5DB840A018CE66C300BA1EEF /* EXPExpect.h */,
+				5DB840A118CE66C300BA1EEF /* EXPFloatTuple.h */,
+				5DB840A218CE66C300BA1EEF /* EXPMatcher.h */,
+				5DB840A318CE66C300BA1EEF /* EXPMatcherHelpers.h */,
+				5DB840A418CE66C300BA1EEF /* EXPMatchers.h */,
+				5DB840A518CE66C300BA1EEF /* EXPMatchers+beCloseTo.h */,
+				5DB840A618CE66C300BA1EEF /* EXPMatchers+beFalsy.h */,
+				5DB840A718CE66C300BA1EEF /* EXPMatchers+beginWith.h */,
+				5DB840A818CE66C300BA1EEF /* EXPMatchers+beGreaterThan.h */,
+				5DB840A918CE66C300BA1EEF /* EXPMatchers+beGreaterThanOrEqualTo.h */,
+				5DB840AA18CE66C300BA1EEF /* EXPMatchers+beIdenticalTo.h */,
+				5DB840AB18CE66C300BA1EEF /* EXPMatchers+beInstanceOf.h */,
+				5DB840AC18CE66C300BA1EEF /* EXPMatchers+beInTheRangeOf.h */,
+				5DB840AD18CE66C300BA1EEF /* EXPMatchers+beKindOf.h */,
+				5DB840AE18CE66C300BA1EEF /* EXPMatchers+beLessThan.h */,
+				5DB840AF18CE66C300BA1EEF /* EXPMatchers+beLessThanOrEqualTo.h */,
+				5DB840B018CE66C300BA1EEF /* EXPMatchers+beNil.h */,
+				5DB840B118CE66C300BA1EEF /* EXPMatchers+beSubclassOf.h */,
+				5DB840B218CE66C300BA1EEF /* EXPMatchers+beSupersetOf.h */,
+				5DB840B318CE66C300BA1EEF /* EXPMatchers+beTruthy.h */,
+				5DB840B418CE66C300BA1EEF /* EXPMatchers+conformTo.h */,
+				5DB840B518CE66C300BA1EEF /* EXPMatchers+contain.h */,
+				5DB840B618CE66C300BA1EEF /* EXPMatchers+endWith.h */,
+				5DB840B718CE66C300BA1EEF /* EXPMatchers+equal.h */,
+				5DB840B818CE66C300BA1EEF /* EXPMatchers+haveCountOf.h */,
+				5DB840B918CE66C300BA1EEF /* EXPMatchers+notify.h */,
+				5DB840BA18CE66C300BA1EEF /* EXPMatchers+raise.h */,
+				5DB840BB18CE66C300BA1EEF /* EXPMatchers+raiseWithReason.h */,
+				5DB840BC18CE66C300BA1EEF /* EXPMatchers+respondTo.h */,
+				5DB840BD18CE66C300BA1EEF /* EXPUnsupportedObject.h */,
+				5DB840BE18CE66C300BA1EEF /* libExpecta-ios-universal.a */,
+				5DB840BF18CE66C300BA1EEF /* libExpecta-macosx.a */,
+				5DB840C018CE66C300BA1EEF /* LICENSE */,
+				5DB840C118CE66C300BA1EEF /* NSObject+Expecta.h */,
+				5DB840C218CE66C300BA1EEF /* NSValue+Expecta.h */,
+				5DB840C318CE66C300BA1EEF /* README.md */,
+			);
+			path = Specta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +537,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SKJControlTests/SKJControlTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/SKJControlTests/Specta",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -462,6 +560,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SKJControl/SKJControl-Prefix.pch";
 				INFOPLIST_FILE = "SKJControlTests/SKJControlTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/SKJControlTests/Specta",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
