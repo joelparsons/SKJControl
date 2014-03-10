@@ -1,0 +1,51 @@
+//
+//  SKJViewController.m
+//  SKJControl
+//
+//  Created by Joel Parsons on 10/03/2014.
+//  Copyright (c) 2014 Joel Parsons. All rights reserved.
+//
+
+#import "SKJViewController.h"
+#import "SKJMyScene.h"
+
+@implementation SKJViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    // Configure the view.
+    SKView * skView = (SKView *)self.view;
+    skView.showsFPS = YES;
+    skView.showsNodeCount = YES;
+    
+    // Create and configure the scene.
+    SKScene * scene = [SKJMyScene sceneWithSize:skView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    
+    // Present the scene.
+    [skView presentScene:scene];
+}
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    } else {
+        return UIInterfaceOrientationMaskAll;
+    }
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Release any cached data, images, etc that aren't in use.
+}
+
+@end
