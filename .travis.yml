@@ -1,3 +1,4 @@
 language: objective-c
 xcode_project: SKJControl.xcodeproj # path to your xcodeproj folder
 xcode_scheme: SKJControl
+script: xctool -project SKJControl.xcodeproj -scheme SKJControl -sdk iphonesimulator -arch i386 build test
