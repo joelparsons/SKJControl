@@ -27,6 +27,7 @@
 		5DB840CC18CE75CF00BA1EEF /* SKJControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CB18CE75CF00BA1EEF /* SKJControl.m */; };
 		5DB840CE18CE761F00BA1EEF /* SKJTargetActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CD18CE761F00BA1EEF /* SKJTargetActionTestCase.m */; };
 		5DB840D018CE776A00BA1EEF /* SKJControlStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */; };
+		5DB840DA18CE7C7500BA1EEF /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB840D218CE7C7500BA1EEF /* libOCMock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,13 @@
 		5DB840CB18CE75CF00BA1EEF /* SKJControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJControl.m; sourceTree = "<group>"; };
 		5DB840CD18CE761F00BA1EEF /* SKJTargetActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJTargetActionTestCase.m; sourceTree = "<group>"; };
 		5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJControlStateTestCase.m; sourceTree = "<group>"; };
+		5DB840D218CE7C7500BA1EEF /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		5DB840D418CE7C7500BA1EEF /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		5DB840D518CE7C7500BA1EEF /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		5DB840D618CE7C7500BA1EEF /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		5DB840D718CE7C7500BA1EEF /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		5DB840D818CE7C7500BA1EEF /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		5DB840D918CE7C7500BA1EEF /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,7 @@
 				5DB8408318CE5EC200BA1EEF /* XCTest.framework in Frameworks */,
 				5DB8408518CE5EC200BA1EEF /* UIKit.framework in Frameworks */,
 				5DB8408418CE5EC200BA1EEF /* Foundation.framework in Frameworks */,
+				5DB840DA18CE7C7500BA1EEF /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +212,7 @@
 		5DB8408918CE5EC200BA1EEF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DB840D118CE7C5C00BA1EEF /* OCMock */,
 				5DB8409918CE66A900BA1EEF /* Expecta */,
 				5DB8408A18CE5EC200BA1EEF /* SKJControlTests-Info.plist */,
 				5DB8408B18CE5EC200BA1EEF /* InfoPlist.strings */,
@@ -273,6 +283,28 @@
 				5DB8407718CE5EC200BA1EEF /* SKJMyScene.m */,
 			);
 			name = "Test Harness";
+			sourceTree = "<group>";
+		};
+		5DB840D118CE7C5C00BA1EEF /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				5DB840D218CE7C7500BA1EEF /* libOCMock.a */,
+				5DB840D318CE7C7500BA1EEF /* OCMock */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		5DB840D318CE7C7500BA1EEF /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				5DB840D418CE7C7500BA1EEF /* NSNotificationCenter+OCMAdditions.h */,
+				5DB840D518CE7C7500BA1EEF /* OCMArg.h */,
+				5DB840D618CE7C7500BA1EEF /* OCMConstraint.h */,
+				5DB840D718CE7C7500BA1EEF /* OCMock.h */,
+				5DB840D818CE7C7500BA1EEF /* OCMockObject.h */,
+				5DB840D918CE7C7500BA1EEF /* OCMockRecorder.h */,
+			);
+			path = OCMock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -564,6 +596,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/SKJControlTests/Specta",
+					"$(SRCROOT)/SKJControlTests/OCMock",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -593,6 +626,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/SKJControlTests/Specta",
+					"$(SRCROOT)/SKJControlTests/OCMock",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
