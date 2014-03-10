@@ -306,6 +306,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Joel Parsons";
 				TargetAttributes = {
+					5DB8405518CE5EC100BA1EEF = {
+						DevelopmentTeam = X8F2VPDE87;
+					};
 					5DB8408018CE5EC200BA1EEF = {
 						TestTargetID = 5DB8405518CE5EC100BA1EEF;
 					};
@@ -497,6 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SKJControl/SKJControl-Prefix.pch";
 				INFOPLIST_FILE = "SKJControl/SKJControl-Info.plist";
@@ -511,6 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SKJControl/SKJControl-Prefix.pch";
 				INFOPLIST_FILE = "SKJControl/SKJControl-Info.plist";
