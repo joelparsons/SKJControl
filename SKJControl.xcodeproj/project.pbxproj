@@ -23,8 +23,10 @@
 		5DB8408418CE5EC200BA1EEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB8405918CE5EC100BA1EEF /* Foundation.framework */; };
 		5DB8408518CE5EC200BA1EEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB8405D18CE5EC200BA1EEF /* UIKit.framework */; };
 		5DB8408D18CE5EC200BA1EEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DB8408B18CE5EC200BA1EEF /* InfoPlist.strings */; };
-		5DB8408F18CE5EC200BA1EEF /* SKJControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8408E18CE5EC200BA1EEF /* SKJControlTests.m */; };
 		5DB840C418CE66C300BA1EEF /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB840BE18CE66C300BA1EEF /* libExpecta-ios-universal.a */; };
+		5DB840CC18CE75CF00BA1EEF /* SKJControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CB18CE75CF00BA1EEF /* SKJControl.m */; };
+		5DB840CE18CE761F00BA1EEF /* SKJTargetActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CD18CE761F00BA1EEF /* SKJTargetActionTestCase.m */; };
+		5DB840D018CE776A00BA1EEF /* SKJControlStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +62,6 @@
 		5DB8408218CE5EC200BA1EEF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5DB8408A18CE5EC200BA1EEF /* SKJControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKJControlTests-Info.plist"; sourceTree = "<group>"; };
 		5DB8408C18CE5EC200BA1EEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5DB8408E18CE5EC200BA1EEF /* SKJControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKJControlTests.m; sourceTree = "<group>"; };
 		5DB8409A18CE66C300BA1EEF /* EXPBackwardCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBackwardCompatibility.h; sourceTree = "<group>"; };
 		5DB8409B18CE66C300BA1EEF /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
 		5DB8409C18CE66C300BA1EEF /* EXPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPDefines.h; sourceTree = "<group>"; };
@@ -103,6 +104,10 @@
 		5DB840C118CE66C300BA1EEF /* NSObject+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Expecta.h"; sourceTree = "<group>"; };
 		5DB840C218CE66C300BA1EEF /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Expecta.h"; sourceTree = "<group>"; };
 		5DB840C318CE66C300BA1EEF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5DB840CA18CE75CF00BA1EEF /* SKJControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKJControl.h; sourceTree = "<group>"; };
+		5DB840CB18CE75CF00BA1EEF /* SKJControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJControl.m; sourceTree = "<group>"; };
+		5DB840CD18CE761F00BA1EEF /* SKJTargetActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJTargetActionTestCase.m; sourceTree = "<group>"; };
+		5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJControlStateTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,14 +170,9 @@
 		5DB8406118CE5EC200BA1EEF /* SKJControl */ = {
 			isa = PBXGroup;
 			children = (
-				5DB8406A18CE5EC200BA1EEF /* SKJAppDelegate.h */,
-				5DB8406B18CE5EC200BA1EEF /* SKJAppDelegate.m */,
-				5DB8406D18CE5EC200BA1EEF /* Main_iPhone.storyboard */,
-				5DB8407018CE5EC200BA1EEF /* Main_iPad.storyboard */,
-				5DB8407318CE5EC200BA1EEF /* SKJViewController.h */,
-				5DB8407418CE5EC200BA1EEF /* SKJViewController.m */,
-				5DB8407618CE5EC200BA1EEF /* SKJMyScene.h */,
-				5DB8407718CE5EC200BA1EEF /* SKJMyScene.m */,
+				5DB840CA18CE75CF00BA1EEF /* SKJControl.h */,
+				5DB840CB18CE75CF00BA1EEF /* SKJControl.m */,
+				5DB840C818CE75B800BA1EEF /* Test Harness */,
 				5DB8407B18CE5EC200BA1EEF /* Images.xcassets */,
 				5DB8406218CE5EC200BA1EEF /* Supporting Files */,
 			);
@@ -193,7 +193,8 @@
 		5DB8408818CE5EC200BA1EEF /* SKJControlTests */ = {
 			isa = PBXGroup;
 			children = (
-				5DB8408E18CE5EC200BA1EEF /* SKJControlTests.m */,
+				5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */,
+				5DB840CD18CE761F00BA1EEF /* SKJTargetActionTestCase.m */,
 				5DB8408918CE5EC200BA1EEF /* Supporting Files */,
 			);
 			path = SKJControlTests;
@@ -202,14 +203,14 @@
 		5DB8408918CE5EC200BA1EEF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5DB8409918CE66A900BA1EEF /* Specta */,
+				5DB8409918CE66A900BA1EEF /* Expecta */,
 				5DB8408A18CE5EC200BA1EEF /* SKJControlTests-Info.plist */,
 				5DB8408B18CE5EC200BA1EEF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5DB8409918CE66A900BA1EEF /* Specta */ = {
+		5DB8409918CE66A900BA1EEF /* Expecta */ = {
 			isa = PBXGroup;
 			children = (
 				5DB8409A18CE66C300BA1EEF /* EXPBackwardCompatibility.h */,
@@ -255,7 +256,23 @@
 				5DB840C218CE66C300BA1EEF /* NSValue+Expecta.h */,
 				5DB840C318CE66C300BA1EEF /* README.md */,
 			);
+			name = Expecta;
 			path = Specta;
+			sourceTree = "<group>";
+		};
+		5DB840C818CE75B800BA1EEF /* Test Harness */ = {
+			isa = PBXGroup;
+			children = (
+				5DB8406A18CE5EC200BA1EEF /* SKJAppDelegate.h */,
+				5DB8406B18CE5EC200BA1EEF /* SKJAppDelegate.m */,
+				5DB8406D18CE5EC200BA1EEF /* Main_iPhone.storyboard */,
+				5DB8407018CE5EC200BA1EEF /* Main_iPad.storyboard */,
+				5DB8407318CE5EC200BA1EEF /* SKJViewController.h */,
+				5DB8407418CE5EC200BA1EEF /* SKJViewController.m */,
+				5DB8407618CE5EC200BA1EEF /* SKJMyScene.h */,
+				5DB8407718CE5EC200BA1EEF /* SKJMyScene.m */,
+			);
+			name = "Test Harness";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB840CC18CE75CF00BA1EEF /* SKJControl.m in Sources */,
 				5DB8407518CE5EC200BA1EEF /* SKJViewController.m in Sources */,
 				5DB8406818CE5EC200BA1EEF /* main.m in Sources */,
 				5DB8406C18CE5EC200BA1EEF /* SKJAppDelegate.m in Sources */,
@@ -371,7 +389,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB8408F18CE5EC200BA1EEF /* SKJControlTests.m in Sources */,
+				5DB840D018CE776A00BA1EEF /* SKJControlStateTestCase.m in Sources */,
+				5DB840CE18CE761F00BA1EEF /* SKJTargetActionTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +565,12 @@
 					"$(inherited)",
 					"$(SRCROOT)/SKJControlTests/Specta",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -568,6 +593,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/SKJControlTests/Specta",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
