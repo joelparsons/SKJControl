@@ -12,9 +12,12 @@
 //frameworks
 #define EXP_SHORTHAND
 #import "Expecta.h"
+#import "OCMock.h"
+//supporting
+#import "SKJTargetActionObject.h"
 
 @interface SKJTargetActionTestCase : XCTestCase
-
+@property (nonatomic, strong) SKJControl * control;
 @end
 
 @implementation SKJTargetActionTestCase
@@ -22,15 +25,60 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here; it will be run once, before the first test case.
+    self.control = [SKJControl node];
 }
 
 - (void)tearDown
 {
-    // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
 }
 
+-(void)testAddTarget{
+    id object = [[NSObject alloc] init];
+    [self.control addTarget:object
+                     action:@selector(description)
+           forControlEvents:UIControlEventAllEvents];
 
+    expect(self.control.allTargets).to.contain(object);
+}
+
+-(void)testAddMultipleTargets{
+    id object1 = [[NSObject alloc] init];
+    id object2 = [[NSObject alloc] init];
+    [self.control addTarget:object1
+                     action:@selector(description)
+           forControlEvents:UIControlEventAllEvents];
+    [self.control addTarget:object2
+                     action:@selector(description)
+           forControlEvents:UIControlEventAllEvents];
+    expect(self.control.allTargets).to.contain(object1);
+    expect(self.control.allTargets).to.contain(object2);
+}
+
+-(void)testCallsBasicTargetActionMethod{
+    id mock = [OCMockObject mockForClass:[SKJTargetActionObject class]];
+    [[mock expect] targetAction];
+
+    [self.control addTarget:mock
+                     action:@selector(targetAction)
+           forControlEvents:UIControlEventAllEvents];
+
+    [self.control sendActionsForControlEvents:UIControlEventAllEvents];
+
+    [mock verify];
+}
+
+-(void)testCallsTargetActionMethodWithSender{
+    id mock = [OCMockObject mockForClass:[SKJTargetActionObject class]];
+    [[mock expect] targetAction:self.control];
+
+    [self.control addTarget:mock
+                     action:@selector(targetAction:)
+           forControlEvents:UIControlEventAllEvents];
+
+    [self.control sendActionsForControlEvents:UIControlEventAllEvents];
+
+    [mock verify];
+}
 
 @end

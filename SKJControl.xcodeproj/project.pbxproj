@@ -28,6 +28,7 @@
 		5DB840CE18CE761F00BA1EEF /* SKJTargetActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CD18CE761F00BA1EEF /* SKJTargetActionTestCase.m */; };
 		5DB840D018CE776A00BA1EEF /* SKJControlStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */; };
 		5DB840DA18CE7C7500BA1EEF /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB840D218CE7C7500BA1EEF /* libOCMock.a */; };
+		5DB840DD18CE898200BA1EEF /* SKJTargetActionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840DC18CE898200BA1EEF /* SKJTargetActionObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		5DB840D718CE7C7500BA1EEF /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
 		5DB840D818CE7C7500BA1EEF /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		5DB840D918CE7C7500BA1EEF /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		5DB840DB18CE898200BA1EEF /* SKJTargetActionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKJTargetActionObject.h; sourceTree = "<group>"; };
+		5DB840DC18CE898200BA1EEF /* SKJTargetActionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJTargetActionObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 		5DB8408918CE5EC200BA1EEF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DB840DB18CE898200BA1EEF /* SKJTargetActionObject.h */,
+				5DB840DC18CE898200BA1EEF /* SKJTargetActionObject.m */,
 				5DB840D118CE7C5C00BA1EEF /* OCMock */,
 				5DB8409918CE66A900BA1EEF /* Expecta */,
 				5DB8408A18CE5EC200BA1EEF /* SKJControlTests-Info.plist */,
@@ -421,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB840DD18CE898200BA1EEF /* SKJTargetActionObject.m in Sources */,
 				5DB840D018CE776A00BA1EEF /* SKJControlStateTestCase.m in Sources */,
 				5DB840CE18CE761F00BA1EEF /* SKJTargetActionTestCase.m in Sources */,
 			);
