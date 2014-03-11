@@ -55,6 +55,18 @@
     expect(self.control.allTargets).to.contain(object2);
 }
 
+-(void)testRemoveTarget{
+    id object = [[NSObject alloc] init];
+    [self.control addTarget:object
+                     action:@selector(description)
+           forControlEvents:UIControlEventAllEvents];
+    expect(self.control.allTargets).to.contain(object);
+    [self.control removeTarget:object
+                        action:@selector(description)
+              forControlEvents:UIControlEventAllEvents];
+    expect(self.control.allTargets).toNot.contain(object);
+}
+
 -(void)testCallsBasicTargetActionMethod{
     id mock = [OCMockObject mockForClass:[SKJTargetActionObject class]];
     [[mock expect] targetAction];

@@ -59,6 +59,18 @@
     [self.targetActions addObject:targetAction];
 }
 
+-(void)removeTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents{
+
+    NSMutableArray * removalArray = [[NSMutableArray alloc] init];
+
+    for (SKJTargetAction * targetAction in self.targetActions) {
+        if (target == targetAction.target) {
+            [removalArray addObject:targetAction];
+        }
+    }
+    [self.targetActions removeObjectsInArray:removalArray];
+}
+
 -(NSSet *)allTargets{
     NSMutableSet * set = [[NSMutableSet alloc] init];
     for (SKJTargetAction * targetAction in self.targetActions) {
