@@ -25,10 +25,11 @@
 		5DB8408D18CE5EC200BA1EEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DB8408B18CE5EC200BA1EEF /* InfoPlist.strings */; };
 		5DB840C418CE66C300BA1EEF /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB840BE18CE66C300BA1EEF /* libExpecta-ios-universal.a */; };
 		5DB840CC18CE75CF00BA1EEF /* SKJControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CB18CE75CF00BA1EEF /* SKJControl.m */; };
-		5DB840CE18CE761F00BA1EEF /* SKJTargetActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CD18CE761F00BA1EEF /* SKJTargetActionTestCase.m */; };
+		5DB840CE18CE761F00BA1EEF /* SKJSettingTargetsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CD18CE761F00BA1EEF /* SKJSettingTargetsTestCase.m */; };
 		5DB840D018CE776A00BA1EEF /* SKJControlStateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */; };
 		5DB840DA18CE7C7500BA1EEF /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB840D218CE7C7500BA1EEF /* libOCMock.a */; };
 		5DB840DD18CE898200BA1EEF /* SKJTargetActionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840DC18CE898200BA1EEF /* SKJTargetActionObject.m */; };
+		5DB840DF18CE917400BA1EEF /* SKJCallingActionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840DE18CE917400BA1EEF /* SKJCallingActionsTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +109,7 @@
 		5DB840C318CE66C300BA1EEF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5DB840CA18CE75CF00BA1EEF /* SKJControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKJControl.h; sourceTree = "<group>"; };
 		5DB840CB18CE75CF00BA1EEF /* SKJControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJControl.m; sourceTree = "<group>"; };
-		5DB840CD18CE761F00BA1EEF /* SKJTargetActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJTargetActionTestCase.m; sourceTree = "<group>"; };
+		5DB840CD18CE761F00BA1EEF /* SKJSettingTargetsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJSettingTargetsTestCase.m; sourceTree = "<group>"; };
 		5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJControlStateTestCase.m; sourceTree = "<group>"; };
 		5DB840D218CE7C7500BA1EEF /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		5DB840D418CE7C7500BA1EEF /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		5DB840D918CE7C7500BA1EEF /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		5DB840DB18CE898200BA1EEF /* SKJTargetActionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKJTargetActionObject.h; sourceTree = "<group>"; };
 		5DB840DC18CE898200BA1EEF /* SKJTargetActionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJTargetActionObject.m; sourceTree = "<group>"; };
+		5DB840DE18CE917400BA1EEF /* SKJCallingActionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJCallingActionsTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */,
-				5DB840CD18CE761F00BA1EEF /* SKJTargetActionTestCase.m */,
+				5DB840CD18CE761F00BA1EEF /* SKJSettingTargetsTestCase.m */,
+				5DB840DE18CE917400BA1EEF /* SKJCallingActionsTestCase.m */,
 				5DB8408918CE5EC200BA1EEF /* Supporting Files */,
 			);
 			path = SKJControlTests;
@@ -427,8 +430,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DB840DD18CE898200BA1EEF /* SKJTargetActionObject.m in Sources */,
+				5DB840DF18CE917400BA1EEF /* SKJCallingActionsTestCase.m in Sources */,
 				5DB840D018CE776A00BA1EEF /* SKJControlStateTestCase.m in Sources */,
-				5DB840CE18CE761F00BA1EEF /* SKJTargetActionTestCase.m in Sources */,
+				5DB840CE18CE761F00BA1EEF /* SKJSettingTargetsTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "SKJControl.h"
+#import <objc/runtime.h>
 
 @interface SKJTargetAction : NSObject
 @property (nonatomic, strong) id target;
@@ -64,7 +65,31 @@
     NSMutableArray * removalArray = [[NSMutableArray alloc] init];
 
     for (SKJTargetAction * targetAction in self.targetActions) {
-        if (target == targetAction.target) {
+        BOOL targetMatch = NO;
+        BOOL selectorMatch = NO;
+        BOOL controlEventMatch = NO;
+        if (target) {
+            if (target == targetAction.target) {
+                targetMatch = YES;
+            }
+        }
+        else{
+            targetMatch = YES;
+        }
+
+        if (sel_isEqual(targetAction.action, action)) {
+            selectorMatch = YES;
+        }
+        else if (action == NULL) {
+            selectorMatch = YES;
+        }
+
+        UIControlEvents xoredEvents = targetAction.controlEvents ^ controlEvents;
+        if (xoredEvents == 0) {
+            controlEventMatch = YES;
+        }
+
+        if (targetMatch && selectorMatch && controlEventMatch) {
             [removalArray addObject:targetAction];
         }
     }
@@ -74,7 +99,12 @@
 -(NSSet *)allTargets{
     NSMutableSet * set = [[NSMutableSet alloc] init];
     for (SKJTargetAction * targetAction in self.targetActions) {
-        [set addObject:targetAction.target];
+        if (targetAction.target) {
+            [set addObject:targetAction.target];
+        }
+        else{
+            [set addObject:[NSNull null]];
+        }
     }
     return set;
 }
