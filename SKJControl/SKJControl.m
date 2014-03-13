@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 @interface SKJTargetAction : NSObject
-@property (nonatomic, strong) id target;
+@property (nonatomic, unsafe_unretained) id target;
 @property (nonatomic) SEL action;
 @property (nonatomic) UIControlEvents controlEvents;
 @end
@@ -111,18 +111,10 @@
 
 -(void)sendActionsForControlEvents:(UIControlEvents)controlEvents{
     for (SKJTargetAction * targetAction in self.targetActions) {
-        NSMethodSignature * methodSigniature = [targetAction.target methodSignatureForSelector:targetAction.action];
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSigniature];
-        [invocation setSelector:targetAction.action];
-        [invocation setTarget:targetAction.target];
-
-        //arguments 0 and 1 are self and _cmd
-        if (methodSigniature.numberOfArguments > 2) {
-            __unsafe_unretained id selfPointer = self;
-            [invocation setArgument:&selfPointer atIndex:2];
-        }
-        
-        [invocation invoke];
+        [[UIApplication sharedApplication] sendAction:targetAction.action
+                                                   to:targetAction.target
+                                                 from:self
+                                             forEvent:nil];
     }
 }
 
