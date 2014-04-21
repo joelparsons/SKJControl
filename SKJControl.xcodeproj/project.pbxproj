@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D6F13E1190566CE00A93F6C /* SKJTargetAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F13E0190566CE00A93F6C /* SKJTargetAction.m */; };
+		5D6F13E31905670300A93F6C /* SKJTargetActionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F13E21905670300A93F6C /* SKJTargetActionTestCase.m */; };
 		5DB8405A18CE5EC100BA1EEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB8405918CE5EC100BA1EEF /* Foundation.framework */; };
 		5DB8405C18CE5EC200BA1EEF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB8405B18CE5EC200BA1EEF /* CoreGraphics.framework */; };
 		5DB8405E18CE5EC200BA1EEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB8405D18CE5EC200BA1EEF /* UIKit.framework */; };
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D6F13DF190566CE00A93F6C /* SKJTargetAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKJTargetAction.h; sourceTree = "<group>"; };
+		5D6F13E0190566CE00A93F6C /* SKJTargetAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJTargetAction.m; sourceTree = "<group>"; };
+		5D6F13E21905670300A93F6C /* SKJTargetActionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKJTargetActionTestCase.m; sourceTree = "<group>"; };
 		5DB8405618CE5EC100BA1EEF /* SKJControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKJControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB8405918CE5EC100BA1EEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5DB8405B18CE5EC200BA1EEF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +191,8 @@
 			children = (
 				5DB840CA18CE75CF00BA1EEF /* SKJControl.h */,
 				5DB840CB18CE75CF00BA1EEF /* SKJControl.m */,
+				5D6F13DF190566CE00A93F6C /* SKJTargetAction.h */,
+				5D6F13E0190566CE00A93F6C /* SKJTargetAction.m */,
 				5DB840C818CE75B800BA1EEF /* Test Harness */,
 				5DB8407B18CE5EC200BA1EEF /* Images.xcassets */,
 				5DB8406218CE5EC200BA1EEF /* Supporting Files */,
@@ -210,6 +217,7 @@
 				5DB840CF18CE776A00BA1EEF /* SKJControlStateTestCase.m */,
 				5DB840CD18CE761F00BA1EEF /* SKJSettingTargetsTestCase.m */,
 				5DB840DE18CE917400BA1EEF /* SKJCallingActionsTestCase.m */,
+				5D6F13E21905670300A93F6C /* SKJTargetActionTestCase.m */,
 				5DB8408918CE5EC200BA1EEF /* Supporting Files */,
 			);
 			path = SKJControlTests;
@@ -422,6 +430,7 @@
 				5DB8406818CE5EC200BA1EEF /* main.m in Sources */,
 				5DB8406C18CE5EC200BA1EEF /* SKJAppDelegate.m in Sources */,
 				5DB8407818CE5EC200BA1EEF /* SKJMyScene.m in Sources */,
+				5D6F13E1190566CE00A93F6C /* SKJTargetAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +440,7 @@
 			files = (
 				5DB840DD18CE898200BA1EEF /* SKJTargetActionObject.m in Sources */,
 				5DB840DF18CE917400BA1EEF /* SKJCallingActionsTestCase.m in Sources */,
+				5D6F13E31905670300A93F6C /* SKJTargetActionTestCase.m in Sources */,
 				5DB840D018CE776A00BA1EEF /* SKJControlStateTestCase.m in Sources */,
 				5DB840CE18CE761F00BA1EEF /* SKJSettingTargetsTestCase.m in Sources */,
 			);
