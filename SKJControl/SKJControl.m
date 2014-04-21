@@ -7,16 +7,8 @@
 //
 
 #import "SKJControl.h"
+#import "SKJTargetAction.h"
 #import <objc/runtime.h>
-
-@interface SKJTargetAction : NSObject
-@property (nonatomic, unsafe_unretained) id target;
-@property (nonatomic) SEL action;
-@property (nonatomic) UIControlEvents controlEvents;
-@end
-
-@implementation SKJTargetAction
-@end
 
 @interface SKJControl ()
 @property (nonatomic, strong) NSMutableArray * targetActions;
@@ -109,12 +101,32 @@
     return set;
 }
 
+-(UIControlEvents)allControlEvents{
+    UIControlEvents allEvents = 0;
+
+    for (SKJTargetAction * targetAction in self.targetActions) {
+        allEvents = allEvents | targetAction.controlEvents;
+    }
+
+    return allEvents;
+}
+
+-(NSArray *)actionsForTarget:(id)target forControlEvent:(UIControlEvents)controlEvent{
+    return nil;
+}
+
+-(void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
+    [[UIApplication sharedApplication] sendAction:action
+                                               to:target
+                                             from:self
+                                         forEvent:event];
+}
+
 -(void)sendActionsForControlEvents:(UIControlEvents)controlEvents{
     for (SKJTargetAction * targetAction in self.targetActions) {
-        [[UIApplication sharedApplication] sendAction:targetAction.action
-                                                   to:targetAction.target
-                                                 from:self
-                                             forEvent:nil];
+        [self sendAction:targetAction.action
+                      to:targetAction.target
+                forEvent:nil];
     }
 }
 

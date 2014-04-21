@@ -128,4 +128,15 @@
     expect(self.control.allTargets).to.contain(object);
 }
 
+-(void)testAllControlEventsWithNoTargets{
+    expect(self.control.allControlEvents).to.equal(0);
+}
+
+-(void)testAllControlEventsWithOneControlEvent{
+    [self.control addTarget:self
+                     action:@selector(description)
+           forControlEvents:UIControlEventEditingDidBegin];
+    expect(self.control.allControlEvents).to.equal(UIControlEventEditingDidBegin);
+}
+
 @end
